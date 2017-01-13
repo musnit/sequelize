@@ -542,8 +542,8 @@ project.UserProjects = {
 }
 u.addProject(project)
  
-// Or by providing a second options.through argument when adding the association, containing the data that should go in the join table
-u.addProject(project, { through: { status: 'active' }})
+// Or by providing a second options argument when adding the association, containing the data that should go in the join table
+u.addProject(project, { status: 'active' })
  
  
 // When associating multiple objects, you can combine the two options above. In this case the second argument
@@ -552,7 +552,7 @@ project1.UserProjects = {
     status: 'inactive'
 }
  
-u.setProjects([project1, project2], { through: { status: 'active' }})
+u.setProjects([project1, project2], { status: 'active' })
 // The code above will record inactive for project one, and active for project two in the join table
 ```
 
